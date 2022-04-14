@@ -6,7 +6,7 @@ resource "random_id" "rg_name" {
   byte_length = 8
 }
 
-resource "azurerm_resource_group" "test" {
+resource "azurerm_resource_group" "myresourcegroup" {
   name     = "testRG-${random_id.rg_name.hex}"
   location = var.location
 }
